@@ -8,157 +8,148 @@
     :root {
       --bg-color: #ffffff;
       --text-color: #000000;
-      --section-bg: #f5f7fa;
+      --section-bg: #f8f9fa;
+      --primary-color: #3b82f6;
+      --border-color: #e5e7eb;
       --card-bg: #ffffff;
-      --border-color: #d1d5db;
     }
     [data-theme="dark"] {
       --bg-color: #121212;
-      --text-color: #f5f5f5;
-      --section-bg: #1f1f1f;
-      --card-bg: #292929;
-      --border-color: #444;
+      --text-color: #f3f4f6;
+      --section-bg: #1f2937;
+      --primary-color: #3b82f6;
+      --border-color: #374151;
+      --card-bg: #1f1f1f;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
       background-color: var(--bg-color);
       color: var(--text-color);
+      line-height: 1.6;
     }
-    nav, footer, section { padding: 20px; }
     nav {
+      padding: 1.25rem 2rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
     nav a {
-      margin: 5px 10px;
+      margin-left: 1.5rem;
       text-decoration: none;
       color: var(--text-color);
+      font-weight: 500;
     }
     .btn {
-      padding: 10px 20px;
-      background-color: #1d4ed8;
-      color: white;
+      background-color: var(--primary-color);
+      color: #fff;
       border: none;
+      padding: 0.75rem 1.5rem;
       border-radius: 6px;
       cursor: pointer;
+      font-weight: bold;
     }
     .hero {
+      background-color: var(--section-bg);
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 50px 20px;
-      background: var(--section-bg);
     }
     .hero h2 {
       font-size: 2.5rem;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    .hero-input {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .hero-input input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
     }
     .hero img {
-      width: 100%;
-      max-width: 900px;
-      margin-top: 40px;
+      max-width: 100%;
+      height: auto;
       border-radius: 12px;
-      object-fit: cover;
+      margin-top: 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     .features {
-      background: var(--bg-color);
-      padding: 60px 20px;
+      background-color: var(--bg-color);
+      padding: 4rem 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    .feature {
-      background: var(--card-bg);
-      padding: 20px;
-      border-radius: 8px;
+    .feature-card {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
       border: 1px solid var(--border-color);
     }
-    .feature h3 {
+    .feature-card h3 {
+      margin-bottom: 0.75rem;
       font-size: 1.25rem;
-      margin-bottom: 10px;
     }
     .cta {
+      background-color: var(--section-bg);
+      padding: 3rem 2rem;
       text-align: center;
-      padding: 50px 20px;
-      background: var(--section-bg);
     }
     .faq {
-      background: var(--bg-color);
-      padding: 40px 20px;
+      padding: 4rem 2rem;
       max-width: 800px;
       margin: auto;
     }
     .faq h4 {
-      font-size: 1.75rem;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
     .accordion-item {
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
     }
     .accordion-item button {
       width: 100%;
-      text-align: left;
-      padding: 15px;
-      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      cursor: pointer;
+      background: var(--card-bg);
       color: var(--text-color);
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
     }
     .accordion-content {
       display: none;
-      padding: 15px;
+      padding: 1rem;
       background: var(--card-bg);
       border-left: 1px solid var(--border-color);
       border-right: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
-      border-radius: 0 0 6px 6px;
+      border-radius: 0 0 8px 8px;
     }
     footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid var(--border-color);
+      padding: 2rem;
       text-align: center;
+      border-top: 1px solid var(--border-color);
     }
     footer a {
-      margin: 0 10px;
-      color: var(--text-color);
+      margin: 0 1rem;
       text-decoration: none;
-    }
-    @media (min-width: 600px) {
-      .hero-input {
-        flex-direction: row;
-      }
-      footer {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+      color: var(--text-color);
     }
   </style>
 </head>
@@ -168,50 +159,46 @@
     <div>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
       <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
     </div>
   </nav>
 
   <section class="hero">
-    <h2>Empowering India's Students to Connect, Learn & Grow</h2>
-    <p>Yuj blends social networking with mentorship and academic growth for the next generation.</p>
-    <div class="hero-input">
-      <input type="email" placeholder="Enter your email" />
-      <button class="btn">Join Waitlist</button>
-    </div>
-    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Students engaging" />
+    <h2>India’s First Learning-First Social Platform</h2>
+    <p>YujTech connects students, mentors, and educators through a powerful academic and career network.</p>
+    <img src="https://images.unsplash.com/photo-1600195077078-56a8d4b4d6ff?auto=format&fit=crop&w=1200&q=80" alt="Student community" />
   </section>
 
-  <section id="features" class="features">
-    <div class="feature">
-      <h3>🤝 YuConnect</h3>
-      <p>Connect with peers through forums, study groups, and real-time messaging to boost collaborative learning.</p>
+  <section class="features">
+    <h2 class="section-title">What Makes Yuj Special?</h2>
+    <div class="feature-card">
+      <h3>YuConnect</h3>
+      <p>Join interest-based communities, participate in forums, and collaborate through real-time messaging and group chats.</p>
     </div>
-    <div class="feature">
-      <h3>🧠 YuMentor</h3>
-      <p>Find mentors, request 1:1 sessions, and receive personalized guidance to build your career path.</p>
+    <div class="feature-card">
+      <h3>YuMentor</h3>
+      <p>Request 1:1 mentorship, schedule video calls, and get career guidance from verified professionals and educators.</p>
     </div>
-    <div class="feature">
-      <h3>📱 Media & Feed</h3>
-      <p>Post your projects, share achievements, and interact with others through our Instagram-style feed.</p>
+    <div class="feature-card">
+      <h3>Media & Feed</h3>
+      <p>Celebrate your academic journey by sharing achievements, projects, and experiences with peers across India.</p>
     </div>
-    <div class="feature">
-      <h3>🎓 YuBridge</h3>
-      <p>Explore internships, get skill endorsements, and showcase your verified portfolio to industry mentors.</p>
+    <div class="feature-card">
+      <h3>YuBridge</h3>
+      <p>Find internships, build a verified portfolio, and receive endorsements from mentors and peers.</p>
     </div>
-    <div class="feature">
-      <h3>📆 YuEvent</h3>
-      <p>Join webinars, campus meetups, and AMAs. Stay in the loop with your personalized academic calendar.</p>
+    <div class="feature-card">
+      <h3>YuEvent</h3>
+      <p>Attend live events, webinars, and meetups – all integrated with your community calendar.</p>
     </div>
-    <div class="feature">
-      <h3>🏠 Inclusive Indian Design</h3>
-      <p>Yuj is made for India – multilingual support, low-data performance, and WhatsApp-friendly notifications.</p>
+    <div class="feature-card">
+      <h3>Inclusive by Design</h3>
+      <p>Multilingual support, low-bandwidth optimization, and WhatsApp notifications make Yuj truly Indian-first.</p>
     </div>
   </section>
 
   <section class="cta">
-    <h3>Join the learning-first social network built for India.</h3>
+    <h3>Start Your Learning Journey with Yuj</h3>
     <button class="btn">Join the Waitlist</button>
   </section>
 
@@ -219,15 +206,15 @@
     <h4>Frequently Asked Questions</h4>
     <div class="accordion-item">
       <button onclick="toggleFAQ(this)">Is Yuj free to use?</button>
-      <div class="accordion-content">Yes, Yuj is completely free for all students, mentors, and educators across India.</div>
+      <div class="accordion-content">Yes, Yuj is completely free for students, educators, and mentors across India.</div>
     </div>
     <div class="accordion-item">
-      <button onclick="toggleFAQ(this)">How do I find a mentor?</button>
-      <div class="accordion-content">Use the YuMentor directory to search by expertise, and send a mentorship request based on their availability.</div>
+      <button onclick="toggleFAQ(this)">How do mentorship requests work?</button>
+      <div class="accordion-content">Students can browse verified mentors, view their availability, and request sessions directly in the app.</div>
     </div>
     <div class="accordion-item">
-      <button onclick="toggleFAQ(this)">Can I create events or communities?</button>
-      <div class="accordion-content">Yes, verified educators and mentors can host webinars or start academic communities tailored to their field.</div>
+      <button onclick="toggleFAQ(this)">Can I create my own community?</button>
+      <div class="accordion-content">Yes! Communities can be created around subjects, institutions, or exam prep. Customize privacy and invite peers.</div>
     </div>
   </section>
 
