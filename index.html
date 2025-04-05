@@ -1,156 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YujTech - Social Learning for India</title>
+  <title>YujTech - India's Social Learning Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     :root {
       --bg-color: #ffffff;
-      --text-color: #000000;
-      --section-bg: #f8f9fa;
-      --primary-color: #3b82f6;
-      --border-color: #e5e7eb;
+      --text-color: #1e293b;
+      --primary-color: #2563eb;
+      --section-bg: #f8fafc;
       --card-bg: #ffffff;
+      --border-color: #e2e8f0;
     }
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #f3f4f6;
-      --section-bg: #1f2937;
-      --primary-color: #3b82f6;
-      --border-color: #374151;
-      --card-bg: #1f1f1f;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-    nav {
-      padding: 1.25rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--bg-color);
-      border-bottom: 1px solid var(--border-color);
-    }
-    nav h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-    }
-    .btn {
-      background-color: var(--primary-color);
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .hero {
-      background-color: var(--section-bg);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
-    }
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-top: 2rem;
-    }
-    .section-title {
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .features {
-      background-color: var(--bg-color);
-      padding: 4rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .feature-card {
-      background-color: var(--card-bg);
-      padding: 2rem;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-    .feature-card h3 {
-      margin-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-    .cta {
-      background-color: var(--section-bg);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .faq {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .faq h4 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    .accordion-item {
-      margin-bottom: 1rem;
-    }
-    .accordion-item button {
-      width: 100%;
-      padding: 1rem;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      background: var(--card-bg);
-      color: var(--text-color);
-      text-align: left;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .accordion-content {
-      display: none;
-      padding: 1rem;
-      background: var(--card-bg);
-      border-left: 1px solid var(--border-color);
-      border-right: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 0 0 8px 8px;
-    }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-    }
-    footer a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--text-color);
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background: var(--card-bg); border-bottom: 1px solid var(--border-color); }
+    nav h1 { font-size: 1.8rem; font-weight: bold; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text-color); font-weight: 500; }
+    .btn { background: var(--primary-color); color: #fff; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    .hero { padding: 4rem 2rem; background: var(--section-bg); text-align: center; }
+    .hero h2 { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .hero img { width: 100%; max-width: 900px; border-radius: 12px; margin-top: 2rem; }
+    .features { padding: 4rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; background: var(--bg-color); }
+    .feature-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; }
+    .feature-card i { font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem; display: block; }
+    .feature-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .feature-card p { font-size: 1rem; }
+    .cta { padding: 3rem 2rem; text-align: center; background: var(--section-bg); }
+    .faq { max-width: 800px; margin: auto; padding: 4rem 2rem; }
+    .faq h4 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+    .accordion-item { margin-bottom: 1rem; }
+    .accordion-item button { width: 100%; text-align: left; padding: 1rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .accordion-content { display: none; padding: 1rem; background: var(--card-bg); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); border-radius: 0 0 8px 8px; }
+    footer { text-align: center; padding: 2rem; background: var(--card-bg); border-top: 1px solid var(--border-color); }
+    footer a { margin: 0 1rem; text-decoration: none; color: var(--text-color); }
   </style>
 </head>
 <body>
@@ -159,7 +45,7 @@
     <div>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
-      <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+      <button class="btn">Join Waitlist</button>
     </div>
   </nav>
 
@@ -169,31 +55,36 @@
     <img src="https://images.unsplash.com/photo-1600195077078-56a8d4b4d6ff?auto=format&fit=crop&w=1200&q=80" alt="Student community" />
   </section>
 
-  <section class="features">
-    <h2 class="section-title">What Makes Yuj Special?</h2>
+  <section class="features" id="features">
     <div class="feature-card">
+      <i class="bi bi-people-fill"></i>
       <h3>YuConnect</h3>
-      <p>Join interest-based communities, participate in forums, and collaborate through real-time messaging and group chats.</p>
+      <p>Join communities, forums, and collaborate through real-time group chats and feeds.</p>
     </div>
     <div class="feature-card">
+      <i class="bi bi-person-video2"></i>
       <h3>YuMentor</h3>
-      <p>Request 1:1 mentorship, schedule video calls, and get career guidance from verified professionals and educators.</p>
+      <p>Request 1:1 mentorship, video calls, and career guidance from verified professionals.</p>
     </div>
     <div class="feature-card">
+      <i class="bi bi-images"></i>
       <h3>Media & Feed</h3>
-      <p>Celebrate your academic journey by sharing achievements, projects, and experiences with peers across India.</p>
+      <p>Share academic milestones, projects, and updates through an interactive social feed.</p>
     </div>
     <div class="feature-card">
+      <i class="bi bi-briefcase-fill"></i>
       <h3>YuBridge</h3>
-      <p>Find internships, build a verified portfolio, and receive endorsements from mentors and peers.</p>
+      <p>Discover internships, build portfolios, and earn mentor endorsements.</p>
     </div>
     <div class="feature-card">
+      <i class="bi bi-calendar-event"></i>
       <h3>YuEvent</h3>
-      <p>Attend live events, webinars, and meetups – all integrated with your community calendar.</p>
+      <p>Attend webinars, campus events, and workshops through your academic calendar.</p>
     </div>
     <div class="feature-card">
+      <i class="bi bi-globe"></i>
       <h3>Inclusive by Design</h3>
-      <p>Multilingual support, low-bandwidth optimization, and WhatsApp notifications make Yuj truly Indian-first.</p>
+      <p>Optimized for India – multilingual, low-data use, WhatsApp alerts & more.</p>
     </div>
   </section>
 
@@ -202,7 +93,7 @@
     <button class="btn">Join the Waitlist</button>
   </section>
 
-  <section id="faq" class="faq">
+  <section class="faq" id="faq">
     <h4>Frequently Asked Questions</h4>
     <div class="accordion-item">
       <button onclick="toggleFAQ(this)">Is Yuj free to use?</button>
@@ -210,11 +101,11 @@
     </div>
     <div class="accordion-item">
       <button onclick="toggleFAQ(this)">How do mentorship requests work?</button>
-      <div class="accordion-content">Students can browse verified mentors, view their availability, and request sessions directly in the app.</div>
+      <div class="accordion-content">Students browse mentors, check availability, and request sessions directly in-app.</div>
     </div>
     <div class="accordion-item">
       <button onclick="toggleFAQ(this)">Can I create my own community?</button>
-      <div class="accordion-content">Yes! Communities can be created around subjects, institutions, or exam prep. Customize privacy and invite peers.</div>
+      <div class="accordion-content">Yes, verified users can create subject or campus-based groups and manage discussions.</div>
     </div>
   </section>
 
@@ -233,12 +124,6 @@
       const isVisible = content.style.display === 'block';
       document.querySelectorAll('.accordion-content').forEach(el => el.style.display = 'none');
       if (!isVisible) content.style.display = 'block';
-    }
-
-    function toggleTheme() {
-      const htmlEl = document.documentElement;
-      const currentTheme = htmlEl.getAttribute('data-theme');
-      htmlEl.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
     }
   </script>
 </body>
