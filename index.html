@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YujTech - Social Learning for India</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --section-bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --border-color: #d1d5db;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --section-bg: #1f1f1f;
+      --card-bg: #292929;
+      --border-color: #444;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    nav, footer, section { padding: 20px; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: var(--text-color);
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--section-bg);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .hero-input input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 900px;
+      margin-top: 40px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .features {
+      background: var(--bg-color);
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .feature {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    .feature h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    .cta {
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--section-bg);
+    }
+    .faq {
+      background: var(--bg-color);
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .faq h4 {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .accordion-item {
+      margin-bottom: 15px;
+    }
+    .accordion-item button {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      background: var(--card-bg);
+      border-left: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      border-radius: 0 0 6px 6px;
+    }
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+    footer a {
+      margin: 0 10px;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    @media (min-width: 600px) {
+      .hero-input {
+        flex-direction: row;
+      }
+      footer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>YujTech</h1>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h2>Empowering India's Students to Connect, Learn & Grow</h2>
+    <p>Yuj blends social networking with mentorship and academic growth for the next generation.</p>
+    <div class="hero-input">
+      <input type="email" placeholder="Enter your email" />
+      <button class="btn">Join Waitlist</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Students engaging" />
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>🤝 YuConnect</h3>
+      <p>Connect with peers through forums, study groups, and real-time messaging to boost collaborative learning.</p>
+    </div>
+    <div class="feature">
+      <h3>🧠 YuMentor</h3>
+      <p>Find mentors, request 1:1 sessions, and receive personalized guidance to build your career path.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 Media & Feed</h3>
+      <p>Post your projects, share achievements, and interact with others through our Instagram-style feed.</p>
+    </div>
+    <div class="feature">
+      <h3>🎓 YuBridge</h3>
+      <p>Explore internships, get skill endorsements, and showcase your verified portfolio to industry mentors.</p>
+    </div>
+    <div class="feature">
+      <h3>📆 YuEvent</h3>
+      <p>Join webinars, campus meetups, and AMAs. Stay in the loop with your personalized academic calendar.</p>
+    </div>
+    <div class="feature">
+      <h3>🏠 Inclusive Indian Design</h3>
+      <p>Yuj is made for India – multilingual support, low-data performance, and WhatsApp-friendly notifications.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>Join the learning-first social network built for India.</h3>
+    <button class="btn">Join the Waitlist</button>
+  </section>
+
+  <section id="faq" class="faq">
+    <h4>Frequently Asked Questions</h4>
+    <div class="accordion-item">
+      <button onclick="toggleFAQ(this)">Is Yuj free to use?</button>
+      <div class="accordion-content">Yes, Yuj is completely free for all students, mentors, and educators across India.</div>
+    </div>
+    <div class="accordion-item">
+      <button onclick="toggleFAQ(this)">How do I find a mentor?</button>
+      <div class="accordion-content">Use the YuMentor directory to search by expertise, and send a mentorship request based on their availability.</div>
+    </div>
+    <div class="accordion-item">
+      <button onclick="toggleFAQ(this)">Can I create events or communities?</button>
+      <div class="accordion-content">Yes, verified educators and mentors can host webinars or start academic communities tailored to their field.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 YujTech</p>
+    <div>
+      <a href="#">About</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      const isVisible = content.style.display === 'block';
+      document.querySelectorAll('.accordion-content').forEach(el => el.style.display = 'none');
+      if (!isVisible) content.style.display = 'block';
+    }
+
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      htmlEl.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
