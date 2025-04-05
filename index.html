@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,8 +14,15 @@
       --card-bg: #ffffff;
       --border-color: #e2e8f0;
     }
+    [data-theme="dark"] {
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --section-bg: #1e293b;
+      --card-bg: #1e293b;
+      --border-color: #334155;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; transition: all 0.3s ease; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background: var(--card-bg); border-bottom: 1px solid var(--border-color); }
     nav h1 { font-size: 1.8rem; font-weight: bold; }
     nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text-color); font-weight: 500; }
@@ -33,10 +40,11 @@
     .faq { max-width: 800px; margin: auto; padding: 4rem 2rem; }
     .faq h4 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
     .accordion-item { margin-bottom: 1rem; }
-    .accordion-item button { width: 100%; text-align: left; padding: 1rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; font-weight: bold; cursor: pointer; }
-    .accordion-content { display: none; padding: 1rem; background: var(--card-bg); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); border-radius: 0 0 8px 8px; }
+    .accordion-item button { width: 100%; text-align: left; padding: 1rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; font-weight: bold; cursor: pointer; color: var(--text-color); }
+    .accordion-content { display: none; padding: 1rem; background: var(--card-bg); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); border-radius: 0 0 8px 8px; color: var(--text-color); }
     footer { text-align: center; padding: 2rem; background: var(--card-bg); border-top: 1px solid var(--border-color); }
     footer a { margin: 0 1rem; text-decoration: none; color: var(--text-color); }
+    .theme-toggle { margin-left: 1rem; background: none; color: var(--text-color); font-size: 1.2rem; cursor: pointer; border: none; }
   </style>
 </head>
 <body>
@@ -46,6 +54,7 @@
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
       <button class="btn">Join Waitlist</button>
+      <button class="theme-toggle" onclick="toggleTheme()"><i class="bi bi-moon-fill"></i></button>
     </div>
   </nav>
 
@@ -124,6 +133,12 @@
       const isVisible = content.style.display === 'block';
       document.querySelectorAll('.accordion-content').forEach(el => el.style.display = 'none');
       if (!isVisible) content.style.display = 'block';
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const theme = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
     }
   </script>
 </body>
