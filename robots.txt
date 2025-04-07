@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://yujtech.com/sitemap.xml
